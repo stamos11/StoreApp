@@ -36,6 +36,10 @@ class CategoriesTableViewController: UITableViewController {
         }
         
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = categories[indexPath.row]
+        self.navigationController?.pushViewController(ProductsTableViewController(category: category), animated: true)
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categories.count
     }

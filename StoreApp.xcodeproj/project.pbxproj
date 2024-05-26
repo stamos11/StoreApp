@@ -15,6 +15,7 @@
 		3E1220D32C035D2C0054C3C2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1220D22C035D2C0054C3C2 /* Category.swift */; };
 		3E1220D62C0360060054C3C2 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1220D52C0360060054C3C2 /* URL+Extensions.swift */; };
 		3E1220D82C03675D0054C3C2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1220D72C03675D0054C3C2 /* Product.swift */; };
+		3E1220DB2C036A740054C3C2 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1220DA2C036A740054C3C2 /* ProductsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3E1220D22C035D2C0054C3C2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3E1220D52C0360060054C3C2 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		3E1220D72C03675D0054C3C2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		3E1220DA2C036A740054C3C2 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,12 @@
 		3E1220B92C035B030054C3C2 /* StoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				3E1220D92C036A5C0054C3C2 /* ViewControllers */,
 				3E1220D42C035FF80054C3C2 /* Extensions */,
 				3E1220D12C035D140054C3C2 /* Models */,
 				3E1220CE2C035CB40054C3C2 /* WebService */,
 				3E1220BA2C035B030054C3C2 /* AppDelegate.swift */,
 				3E1220BC2C035B030054C3C2 /* SceneDelegate.swift */,
-				3E1220BE2C035B030054C3C2 /* CategoriesTableViewController.swift */,
 				3E1220C32C035B040054C3C2 /* Assets.xcassets */,
 				3E1220C82C035B040054C3C2 /* Info.plist */,
 			);
@@ -95,6 +97,15 @@
 				3E1220D52C0360060054C3C2 /* URL+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E1220D92C036A5C0054C3C2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3E1220BE2C035B030054C3C2 /* CategoriesTableViewController.swift */,
+				3E1220DA2C036A740054C3C2 /* ProductsTableViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				3E1220D32C035D2C0054C3C2 /* Category.swift in Sources */,
 				3E1220BF2C035B030054C3C2 /* CategoriesTableViewController.swift in Sources */,
 				3E1220BB2C035B030054C3C2 /* AppDelegate.swift in Sources */,
+				3E1220DB2C036A740054C3C2 /* ProductsTableViewController.swift in Sources */,
 				3E1220BD2C035B030054C3C2 /* SceneDelegate.swift in Sources */,
 				3E1220D82C03675D0054C3C2 /* Product.swift in Sources */,
 			);
