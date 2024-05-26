@@ -30,4 +30,18 @@ class StoreHTTPClient {
         
         return categories
     }
+    func getProductsByCategory(categoryId: Int) async throws -> [Product] {
+        
+        let (data, response) = try await URLSession.shared.data(from: URL.productsByCategory(categoryId))
+        
+        guard let httpResponse = response as? HTTPURLResponse,
+              httpResponse.statusCode == 200
+        else {
+            throw NetworkError.InvalidServerResponse
+        }
+        guard let products =  try? JSONDecoder().decode([Product].self, from: data) else {
+            throw NetworkError.DecodingError
+        }
+        return products
+    }
 }
