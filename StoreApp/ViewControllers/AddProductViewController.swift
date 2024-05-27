@@ -7,8 +7,11 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class AddProductViewController: UIViewController {
+    
+    private var selectedCategory: Category?
     
     lazy var titleTextField: UITextField = {
        let textField = UITextField()
@@ -41,6 +44,13 @@ class AddProductViewController: UIViewController {
         textView.backgroundColor = .lightGray
         return textView
     }()
+    lazy var categoryPickerView: CategoryPickerView = {
+        let pickerView = CategoryPickerView { [weak self] category in
+            print(category)
+            self?.selectedCategory = category
+        }
+        return pickerView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +69,11 @@ class AddProductViewController: UIViewController {
         stackView.addArrangedSubview(titleTextField)
         stackView.addArrangedSubview(priceTextField)
         stackView.addArrangedSubview(descriptionTextView)
+        
+        let hostingController = UIHostingController(rootView: categoryPickerView)
+        stackView.addArrangedSubview(hostingController.view)
+        addChild(hostingController)
+        hostingController.didMove(toParent: self)
         stackView.addArrangedSubview(imageURLTextField)
         view.addSubview(stackView)
         

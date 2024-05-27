@@ -19,6 +19,7 @@
 		3EBC7E522C04895100863896 /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E512C04895100863896 /* ProductCellView.swift */; };
 		3EBC7E542C048B2B00863896 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E532C048B2B00863896 /* Locale+Extensions.swift */; };
 		3EBC7E562C048E7800863896 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E552C048E7800863896 /* AddProductViewController.swift */; };
+		3EBC7E582C0493DB00863896 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3EBC7E512C04895100863896 /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
 		3EBC7E532C048B2B00863896 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		3EBC7E552C048E7800863896 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				3EBC7E512C04895100863896 /* ProductCellView.swift */,
+				3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				3E1220DB2C036A740054C3C2 /* ProductsTableViewController.swift in Sources */,
 				3E1220BD2C035B030054C3C2 /* SceneDelegate.swift in Sources */,
 				3E1220D82C03675D0054C3C2 /* Product.swift in Sources */,
+				3EBC7E582C0493DB00863896 /* CategoryPickerView.swift in Sources */,
 				3EBC7E542C048B2B00863896 /* Locale+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
