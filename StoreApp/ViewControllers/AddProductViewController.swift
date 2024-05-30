@@ -24,8 +24,13 @@ struct AddProductFormState {
         title && price && imageUrl && description
     }
 }
+protocol AddProductViewControllerDelegate {
+    func addProductViewControllerDidCancel(controller: AddProductViewController)
+    func addProductViewControllerDidSave(product: Product, controller: AddProductViewController)
+}
 class AddProductViewController: UIViewController {
     
+    var delegate: AddProductViewControllerDelegate?
     private var selectedCategory: Category?
     private var addProductFormState = AddProductFormState()
     
@@ -79,7 +84,7 @@ class AddProductViewController: UIViewController {
         return barButtonItem
     }()
     @objc func cancelButtonPressed(_ sender: UIBarButtonItem) {
-        
+        delegate?.addProductViewControllerDidCancel(controller: self)
     }
     lazy var saveBarButtonItem: UIBarButtonItem = {
         let barButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveButtonPressed))
@@ -87,7 +92,18 @@ class AddProductViewController: UIViewController {
         return barButtonItem
     }()
     @objc func saveButtonPressed(_ sender: UIBarButtonItem) {
-  
+        guard let title = titleTextField.text,
+              let price = Double(priceTextField.text ?? "0.00"),
+              let description = descriptionTextView.text,
+              let imageUrl = imageURLTextField.text,
+              let productImageUrl = URL(string: imageUrl),
+              let category = selectedCategory
+        else {return}
+        
+        let product = Product(title: title, price: price, description: description, images: [productImageUrl], category: category)
+        
+        delegate?.addProductViewControllerDidSave(product: product, controller: self)
+        
     }
     @objc func textFieldDidChange(_ sender: UITextField) {
         guard let text = sender.text else {

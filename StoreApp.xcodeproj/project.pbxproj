@@ -21,6 +21,7 @@
 		3EBC7E562C048E7800863896 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E552C048E7800863896 /* AddProductViewController.swift */; };
 		3EBC7E582C0493DB00863896 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */; };
 		3ED44E252C08FDFE0070B04E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED44E242C08FDFE0070B04E /* String+Extensions.swift */; };
+		3ED44E272C09043C0070B04E /* CreateProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED44E262C09043C0070B04E /* CreateProductRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3EBC7E552C048E7800863896 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
 		3ED44E242C08FDFE0070B04E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		3ED44E262C09043C0070B04E /* CreateProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				3E1220D22C035D2C0054C3C2 /* Category.swift */,
 				3E1220D72C03675D0054C3C2 /* Product.swift */,
+				3ED44E262C09043C0070B04E /* CreateProductRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				3E1220D82C03675D0054C3C2 /* Product.swift in Sources */,
 				3EBC7E582C0493DB00863896 /* CategoryPickerView.swift in Sources */,
 				3EBC7E542C048B2B00863896 /* Locale+Extensions.swift in Sources */,
+				3ED44E272C09043C0070B04E /* CreateProductRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
