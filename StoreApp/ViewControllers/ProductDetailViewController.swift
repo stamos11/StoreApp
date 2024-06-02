@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 class ProductDetailViewController: UIViewController {
     
@@ -28,6 +29,11 @@ class ProductDetailViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Delete", for: .normal)
         return button
+    }()
+    lazy var loadingIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.style = .large
+        return activityIndicatorView
     }()
     
     
@@ -61,6 +67,24 @@ class ProductDetailViewController: UIViewController {
         descriptionLabel.text = product.description
         priceLabel.text = product.price.formatAsCurrency()
         
+        
+        // fetch images
+        Task {
+            loadingIndicatorView.startAnimating()
+            var images: [UIImage] = []
+            for imageURL in (product.images ?? []) {
+                guard let downloadedImage = await ImageLoader.load(url: imageURL) else {return}
+                images.append(downloadedImage)
+            }
+            let productImageListVC = UIHostingController(rootView: ProductImageListView(images: images))
+            guard let productImageListView = productImageListVC.view else {return}
+            stackView.insertArrangedSubview(productImageListView, at: 0)
+            addChild(productImageListVC)
+            productImageListVC.didMove(toParent: self)
+            loadingIndicatorView.stopAnimating()
+        }
+        
+        stackView.addArrangedSubview(loadingIndicatorView)
         stackView.addArrangedSubview(descriptionLabel)
         stackView.addArrangedSubview(priceLabel)
         stackView.addArrangedSubview(deleteProductButton)
@@ -68,6 +92,7 @@ class ProductDetailViewController: UIViewController {
         view.addSubview(stackView)
         
         stackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        
         
     }
 }

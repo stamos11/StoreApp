@@ -20,6 +20,8 @@
 		3EBC7E542C048B2B00863896 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E532C048B2B00863896 /* Locale+Extensions.swift */; };
 		3EBC7E562C048E7800863896 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E552C048E7800863896 /* AddProductViewController.swift */; };
 		3EBC7E582C0493DB00863896 /* CategoryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */; };
+		3EC92D2E2C0CCDD000E1AD75 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC92D2D2C0CCDD000E1AD75 /* ImageLoader.swift */; };
+		3EC92D302C0CCF7300E1AD75 /* ProductImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC92D2F2C0CCF7300E1AD75 /* ProductImageListView.swift */; };
 		3ED44E252C08FDFE0070B04E /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED44E242C08FDFE0070B04E /* String+Extensions.swift */; };
 		3ED44E272C09043C0070B04E /* CreateProductRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED44E262C09043C0070B04E /* CreateProductRequest.swift */; };
 		3ED44E292C0909890070B04E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ED44E282C0909890070B04E /* ProductDetailViewController.swift */; };
@@ -42,6 +44,8 @@
 		3EBC7E532C048B2B00863896 /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		3EBC7E552C048E7800863896 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerView.swift; sourceTree = "<group>"; };
+		3EC92D2D2C0CCDD000E1AD75 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		3EC92D2F2C0CCF7300E1AD75 /* ProductImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImageListView.swift; sourceTree = "<group>"; };
 		3ED44E242C08FDFE0070B04E /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		3ED44E262C09043C0070B04E /* CreateProductRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProductRequest.swift; sourceTree = "<group>"; };
 		3ED44E282C0909890070B04E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		3E1220B92C035B030054C3C2 /* StoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				3EC92D2C2C0CCDC400E1AD75 /* Loaders */,
 				3EBC7E4E2C04891600863896 /* Views */,
 				3E1220D92C036A5C0054C3C2 /* ViewControllers */,
 				3E1220D42C035FF80054C3C2 /* Extensions */,
@@ -136,8 +141,17 @@
 			children = (
 				3EBC7E512C04895100863896 /* ProductCellView.swift */,
 				3EBC7E572C0493DB00863896 /* CategoryPickerView.swift */,
+				3EC92D2F2C0CCF7300E1AD75 /* ProductImageListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3EC92D2C2C0CCDC400E1AD75 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				3EC92D2D2C0CCDD000E1AD75 /* ImageLoader.swift */,
+			);
+			path = Loaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,11 +229,13 @@
 				3E1220D02C035CCB0054C3C2 /* StoreHTTPClient.swift in Sources */,
 				3EBC7E522C04895100863896 /* ProductCellView.swift in Sources */,
 				3E1220D62C0360060054C3C2 /* URL+Extensions.swift in Sources */,
+				3EC92D302C0CCF7300E1AD75 /* ProductImageListView.swift in Sources */,
 				3E1220D32C035D2C0054C3C2 /* Category.swift in Sources */,
 				3E1220BF2C035B030054C3C2 /* CategoriesTableViewController.swift in Sources */,
 				3ED44E2B2C090C5C0070B04E /* Double+Extensions.swift in Sources */,
 				3E1220BB2C035B030054C3C2 /* AppDelegate.swift in Sources */,
 				3E1220DB2C036A740054C3C2 /* ProductsTableViewController.swift in Sources */,
+				3EC92D2E2C0CCDD000E1AD75 /* ImageLoader.swift in Sources */,
 				3E1220BD2C035B030054C3C2 /* SceneDelegate.swift in Sources */,
 				3E1220D82C03675D0054C3C2 /* Product.swift in Sources */,
 				3EBC7E582C0493DB00863896 /* CategoryPickerView.swift in Sources */,
