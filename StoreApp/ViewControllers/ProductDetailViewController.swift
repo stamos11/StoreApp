@@ -12,6 +12,7 @@ import SwiftUI
 class ProductDetailViewController: UIViewController {
     
     let product: Product
+    let client = StoreHTTPClient()
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel()
@@ -54,6 +55,23 @@ class ProductDetailViewController: UIViewController {
         setupUI()
     }
     
+    @objc private func deleteProductButtonPressed(_ sender: UIButton) {
+        Task {
+            do {
+                guard let productId = product.id else {return}
+                let isDeleted = try await client.deleteProduct(productId: productId)
+                if isDeleted {
+                    let _ = navigationController?.popViewController(animated: true)
+                }
+            } catch {
+                print("Show error")
+            }
+            
+        }
+        
+        
+    }
+    
     private func setupUI() {
         
         let stackView = UIStackView()
@@ -83,6 +101,7 @@ class ProductDetailViewController: UIViewController {
             productImageListVC.didMove(toParent: self)
             loadingIndicatorView.stopAnimating()
         }
+        deleteProductButton.addTarget(self, action: #selector(deleteProductButtonPressed), for: .touchUpInside)
         
         stackView.addArrangedSubview(loadingIndicatorView)
         stackView.addArrangedSubview(descriptionLabel)
