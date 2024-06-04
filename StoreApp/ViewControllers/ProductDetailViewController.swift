@@ -64,7 +64,7 @@ class ProductDetailViewController: UIViewController {
                     let _ = navigationController?.popViewController(animated: true)
                 }
             } catch {
-                print("Show error")
+                showAlert(title: "Error", message: "Unable to delete the product.")
             }
             
         }
