@@ -64,7 +64,7 @@ class ProductDetailViewController: UIViewController {
                     let _ = navigationController?.popViewController(animated: true)
                 }
             } catch {
-                showAlert(title: "Error", message: "Unable to delete the product.")
+                showMessage(title: "Error", message: "Unable to delete the product.Please check productId", messageType: .error)
             }
             
         }
