@@ -59,7 +59,8 @@ class ProductDetailViewController: UIViewController {
         Task {
             do {
                 guard let productId = product.id else {return}
-                let isDeleted = try await client.deleteProduct(productId: productId)
+                
+                let isDeleted: Bool = try await client.load(Resource(url: URL.deleteProduct(productId), method: .delete))
                 if isDeleted {
                     let _ = navigationController?.popViewController(animated: true)
                 }

@@ -29,7 +29,7 @@ class CategoriesTableViewController: UITableViewController {
     private func populateCategories() async {
         
         do {
-            categories = try await client.getAllCategories()
+            categories = try await client.load(Resource(url: URL.allCategories))
             print(categories)
         } catch {
             print(error.localizedDescription)
